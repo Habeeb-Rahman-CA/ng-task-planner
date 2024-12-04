@@ -1,29 +1,18 @@
 <div class="p-4 max-w-md mt-8 mx-auto bg-white rounded-md shadow-md">
     <h1 class="text-2xl font-bold text-center">Task Planner</h1>
     <form [formGroup]="taskForm" class="mt-4 space-y-4" (ngSubmit)="addTask()">
-      <div>
-        <label class="block text-sm font-medium">Task Title</label>
-        <input
-          type="text"
-          formControlName="title"
-          class="w-full mt-1 px-3 py-2 border rounded-md"
-          placeholder="Enter task title"
-        />
-      </div>
-      <div>
-        <label class="block text-sm font-medium">Deadline</label>
-        <input
-          type="datetime-local"
-          formControlName="deadline"
-          class="w-full mt-1 px-3 py-2 border rounded-md"
-        />
-      </div>
-      <button
-        type="submit"
-        class="w-full py-2 px-4 bg-blue-500 text-white rounded-md"
-      >
-        Add Task
-      </button>
+        <div>
+            <label class="block text-sm font-medium">Task Title</label>
+            <input type="text" formControlName="title" class="w-full mt-1 px-3 py-2 border rounded-md"
+                placeholder="Enter task title" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Deadline</label>
+            <input type="datetime-local" formControlName="deadline" class="w-full mt-1 px-3 py-2 border rounded-md" />
+        </div>
+        <button type="submit" class="w-full py-2 px-4 bg-blue-500 text-white rounded-md">
+            Add Task
+        </button>
     </form>
     <app-task-list [tasks]="tasks"></app-task-list>
-  </div>
+</div>
